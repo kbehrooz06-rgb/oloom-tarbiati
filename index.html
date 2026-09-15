@@ -1,1 +1,397 @@
+عالی 🌹 حالا رسیدیم به جایی که کد را وارد می‌کنیم.
 
+### قدم بعد: کد صفحه اصلی
+
+در همان صفحه‌ای که فایل `index.html` را ساختی، یک قسمت بزرگ برای نوشتن کد داری.
+
+**کل کد زیر را از اول تا آخر کپی کن و داخل آن قسمت قرار بده:**
+
+```html
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>گروه آموزشی علوم تربیتی و ابتدایی</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Tahoma, Arial, sans-serif;
+            background: #f3f6f9;
+            color: #222;
+        }
+
+        header {
+            background: linear-gradient(135deg, #1769aa, #0d47a1);
+            color: white;
+            padding: 35px 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0 0 10px;
+            font-size: 28px;
+        }
+
+        header p {
+            margin: 0;
+            font-size: 16px;
+        }
+
+        nav {
+            background: white;
+            padding: 15px;
+            text-align: center;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+
+        nav a {
+            display: inline-block;
+            text-decoration: none;
+            color: #0d47a1;
+            margin: 5px 10px;
+            font-weight: bold;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 30px auto;
+            padding: 0 15px;
+        }
+
+        .welcome {
+            background: white;
+            border-radius: 15px;
+            padding: 25px;
+            text-align: center;
+            box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+            margin-bottom: 25px;
+        }
+
+        .welcome h2 {
+            color: #0d47a1;
+            margin-top: 0;
+        }
+
+        .login-section {
+            text-align: center;
+            margin: 30px 0;
+        }
+
+        .main-btn {
+            display: inline-block;
+            padding: 13px 25px;
+            margin: 5px;
+            border-radius: 10px;
+            background: #0d47a1;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .register-btn {
+            background: #388e3c;
+        }
+
+        .term-box {
+            background: white;
+            padding: 20px;
+            border-radius: 15px;
+            margin-bottom: 25px;
+            box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+        }
+
+        .term-box h3 {
+            margin-top: 0;
+            color: #1769aa;
+        }
+
+        select {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: 15px;
+            background: white;
+        }
+
+        .lesson {
+            background: white;
+            border-radius: 15px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+        }
+
+        .lesson h3 {
+            margin-top: 0;
+            color: #0d47a1;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 12px;
+        }
+
+        .file-box {
+            background: #f7f9fb;
+            border-radius: 10px;
+            padding: 15px;
+            margin-top: 12px;
+        }
+
+        .file-title {
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .buttons {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 18px;
+            border-radius: 8px;
+            text-decoration: none;
+            color: white;
+            font-size: 14px;
+        }
+
+        .btn-pdf {
+            background: #d32f2f;
+        }
+
+        .btn-download {
+            background: #1769aa;
+        }
+
+        footer {
+            margin-top: 40px;
+            background: #263238;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            font-size: 14px;
+        }
+
+        @media (max-width: 600px) {
+
+            header h1 {
+                font-size: 22px;
+            }
+
+            .buttons {
+                flex-direction: column;
+            }
+
+            .btn {
+                text-align: center;
+                width: 100%;
+            }
+
+            nav a {
+                display: block;
+                margin: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>گروه آموزشی علوم تربیتی و ابتدایی</h1>
+        <p>سامانه آموزشی و دسترسی به محتوای درسی</p>
+    </header>
+
+    <nav>
+        <a href="index.html">صفحه اصلی</a>
+        <a href="#">دروس</a>
+        <a href="#">ورود دانشجو</a>
+        <a href="register.html">ثبت‌نام</a>
+    </nav>
+
+    <div class="container">
+
+        <section class="welcome">
+
+            <h2>
+                به گروه آموزشی علوم تربیتی و ابتدایی خوش آمدید
+            </h2>
+
+            <p>
+                دانشجویان می‌توانند پس از ورود به سامانه،
+                به فایل‌های صوتی و جزوات PDF دروس دسترسی داشته باشند.
+            </p>
+
+            <div class="login-section">
+
+                <a href="#" class="main-btn">
+                    ورود دانشجو
+                </a>
+
+                <a href="register.html" class="main-btn register-btn">
+                    ثبت‌نام دانشجو
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <section class="term-box">
+
+            <h3>
+                انتخاب سال و نیمسال تحصیلی
+            </h3>
+
+            <select>
+
+                <option>
+                    ۱۴۰۵ - ۱۴۰۶ | نیمسال اول
+                </option>
+
+                <option>
+                    ۱۴۰۵ - ۱۴۰۶ | نیمسال دوم
+                </option>
+
+                <option>
+                    ۱۴۰۴ - ۱۴۰۵ | نیمسال اول
+                </option>
+
+                <option>
+                    ۱۴۰۴ - ۱۴۰۵ | نیمسال دوم
+                </option>
+
+            </select>
+
+        </section>
+
+
+        <section class="lesson">
+
+            <h3>
+                📘 روان‌شناسی تربیتی
+            </h3>
+
+            <div class="file-box">
+
+                <div class="file-title">
+                    📄 جزوه جلسه اول
+                </div>
+
+                <div class="buttons">
+
+                    <a href="#" class="btn btn-pdf">
+                        مشاهده PDF
+                    </a>
+
+                    <a href="#" class="btn btn-download">
+                        دانلود PDF
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="file-box">
+
+                <div class="file-title">
+                    🎧 فایل صوتی جلسه اول
+                </div>
+
+                <audio controls style="width:100%;">
+                    مرورگر شما از پخش صوت پشتیبانی نمی‌کند.
+                </audio>
+
+                <br><br>
+
+                <a href="#" class="btn btn-download">
+                    دانلود فایل صوتی
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <section class="lesson">
+
+            <h3>
+                📘 روش‌های تدریس
+            </h3>
+
+            <div class="file-box">
+
+                <div class="file-title">
+                    📄 جزوه جلسه اول
+                </div>
+
+                <div class="buttons">
+
+                    <a href="#" class="btn btn-pdf">
+                        مشاهده PDF
+                    </a>
+
+                    <a href="#" class="btn btn-download">
+                        دانلود PDF
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="file-box">
+
+                <div class="file-title">
+                    🎧 فایل صوتی جلسه اول
+                </div>
+
+                <audio controls style="width:100%;">
+                    مرورگر شما از پخش صوت پشتیبانی نمی‌کند.
+                </audio>
+
+                <br><br>
+
+                <a href="#" class="btn btn-download">
+                    دانلود فایل صوتی
+                </a>
+
+            </div>
+
+        </section>
+
+    </div>
+
+
+    <footer>
+        © ۱۴۰۵ گروه آموزشی علوم تربیتی و ابتدایی
+    </footer>
+
+</body>
+</html>
+```
+
+### حالا خیلی مهم
+
+بعد از چسباندن کد، پایین صفحه دنبال دکمه‌ای مثل:
+
+**Commit changes**
+
+بگرد و روی آن بزن.
+
+اگر پنجره‌ای باز شد، دوباره **Commit changes** را بزن.
+
+بعد فایل `index.html` داخل مخزن ذخیره می‌شود. ✅
+
+**فعلاً همین کار را انجام بده.**
+
+وقتی ذخیره شد، بگو **«ذخیره شد»**. بعد می‌رویم سراغ ساخت فایل `register.html` داخل خود GitHub و بعد سایت را آنلاین می‌کنیم.
