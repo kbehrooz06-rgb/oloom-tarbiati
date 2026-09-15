@@ -1,1 +1,329 @@
 
+عالی 🌹 حالا کد صفحه **ثبت‌نام دانشجو** را داخل `register.html` قرار می‌دهیم.
+
+کل کد زیر را کپی کن و در قسمت کدنویسی GitHub بچسبان:
+
+```html
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ثبت‌نام دانشجو | گروه آموزشی علوم تربیتی و ابتدایی</title>
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Tahoma, Arial, sans-serif;
+            background: #f3f6f9;
+            color: #222;
+        }
+
+        header {
+            background: linear-gradient(135deg, #1769aa, #0d47a1);
+            color: white;
+            text-align: center;
+            padding: 30px 15px;
+        }
+
+        header h1 {
+            margin: 0 0 10px;
+            font-size: 25px;
+        }
+
+        header p {
+            margin: 0;
+            font-size: 14px;
+        }
+
+        .container {
+            max-width: 500px;
+            margin: 40px auto;
+            padding: 15px;
+        }
+
+        .register-box {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .register-box h2 {
+            text-align: center;
+            color: #0d47a1;
+            margin-top: 0;
+            margin-bottom: 25px;
+        }
+
+        .form-group {
+            margin-bottom: 18px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+
+        input {
+            width: 100%;
+            padding: 13px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: 15px;
+            outline: none;
+        }
+
+        input:focus {
+            border-color: #1769aa;
+        }
+
+        button {
+            width: 100%;
+            padding: 14px;
+            border: none;
+            border-radius: 8px;
+            background: #1769aa;
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #0d47a1;
+        }
+
+        .login-link {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .login-link a,
+        .back-link a {
+            color: #0d47a1;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .back-link {
+            text-align: center;
+            margin-top: 15px;
+        }
+
+        footer {
+            margin-top: 30px;
+            background: #263238;
+            color: white;
+            text-align: center;
+            padding: 18px;
+            font-size: 13px;
+        }
+
+    </style>
+</head>
+
+<body>
+
+<header>
+
+    <h1>
+        گروه آموزشی علوم تربیتی و ابتدایی
+    </h1>
+
+    <p>
+        سامانه آموزشی دانشجویان
+    </p>
+
+</header>
+
+
+<div class="container">
+
+    <div class="register-box">
+
+        <h2>
+            📝 ثبت‌نام دانشجو
+        </h2>
+
+
+        <form id="registerForm">
+
+            <div class="form-group">
+
+                <label>
+                    کد دانشجویی
+                </label>
+
+                <input
+                    type="text"
+                    id="studentCode"
+                    placeholder="کد دانشجویی"
+                    required
+                >
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label>
+                    نام
+                </label>
+
+                <input
+                    type="text"
+                    id="firstName"
+                    placeholder="نام"
+                    required
+                >
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label>
+                    نام خانوادگی
+                </label>
+
+                <input
+                    type="text"
+                    id="lastName"
+                    placeholder="نام خانوادگی"
+                    required
+                >
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label>
+                    رمز عبور
+                </label>
+
+                <input
+                    type="password"
+                    id="password"
+                    placeholder="رمز عبور"
+                    required
+                >
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label>
+                    تکرار رمز عبور
+                </label>
+
+                <input
+                    type="password"
+                    id="password2"
+                    placeholder="تکرار رمز عبور"
+                    required
+                >
+
+            </div>
+
+
+            <button type="submit">
+                ثبت‌نام
+            </button>
+
+        </form>
+
+
+        <div class="login-link">
+
+            قبلاً ثبت‌نام کرده‌اید؟
+
+            <a href="login.html">
+                ورود به سامانه
+            </a>
+
+        </div>
+
+
+        <div class="back-link">
+
+            <a href="index.html">
+                ← بازگشت به صفحه اصلی
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<footer>
+
+    © ۱۴۰۵ گروه آموزشی علوم تربیتی و ابتدایی
+
+</footer>
+
+
+<script>
+
+document.getElementById("registerForm").addEventListener("submit", function(event) {
+
+    event.preventDefault();
+
+    const studentCode =
+        document.getElementById("studentCode").value.trim();
+
+    const firstName =
+        document.getElementById("firstName").value.trim();
+
+    const lastName =
+        document.getElementById("lastName").value.trim();
+
+    const password =
+        document.getElementById("password").value;
+
+    const password2 =
+        document.getElementById("password2").value;
+
+
+    if (password !== password2) {
+
+        alert("رمز عبور و تکرار رمز عبور یکسان نیست.");
+
+        return;
+    }
+
+
+    if (studentCode.length < 3) {
+
+        alert("کد دانشجویی را صحیح وارد کنید.");
+
+        return;
+    }
+
+
+    alert(
+        "فرم ثبت‌نام صحیح است.\n\n" +
+        "در مرحله بعد ثبت‌نام را به پایگاه داده واقعی متصل می‌کنیم."
+    );
+
+});
+
+</script>
+
+</body>
+</html>
+```
+
+### 
